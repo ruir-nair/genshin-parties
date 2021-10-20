@@ -50,7 +50,7 @@ return [
     'H38' => 'Raiden Shogun',
     'H39' => 'Kujou Sara',
     'H40' => 'Sangonomiya Kokomi',
-    'H41' => 'Aloy'    
+    'H41' => 'Aloy'
 ];
 
 ?>

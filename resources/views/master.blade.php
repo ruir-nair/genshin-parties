@@ -34,14 +34,12 @@
         </footer>
     </div>
 
-
-
-    <script src="{{ asset('assets/js/bootstrap.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery-3.6.0.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('js/shuffle.js') }}"></script>
-    <script src="{{ asset('js/encrypt-decrypt.js') }}"></script>
-    <script src="{{ asset('js/utility.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery-3.6.0.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/bootstrap.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/shuffle.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/encrypt-decrypt.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/utility.js') }}"></script>
 </body>
 </html>
