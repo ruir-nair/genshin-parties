@@ -1,67 +1,90 @@
-<!doctype html>
-<html>
-<head>
-@section('title')
-<title>Genshin Party Generator</title>
-@endsection
-
-
-<style type="text/css">
-
-</style>
-<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ asset('/css/app.css') }}">
-
-@section('header_content')
-
-@endsection
-</head>
-
-<body>
+@extends('master')
+@section('title','Genshin Party Generator')
+@section('content')
 This belongs here:
 <br>
-Button for Generate party. This triggers combination of (40 C 4). One of them.
+Button for Generate party. This triggers combination of (41 C 4). One of them.
 <br>
 
-<!-- minimum 3 -->
-<input type="number" id="MAXCHAR" value=40></input>
-
-<button type="button" class="btn btn-primary" onclick=RandomFour()>SEARCH COMBINATION</button>
+<!-- minimum 4 -->
+<button type="button" class="btn btn-primary" onclick=RandomFour()>SEARCH COMBINATION</button> | 
+Exclude char(s): <input type="string" id="unobtainable"></input> |
 
 <br>
 
-<h1 id="char1">
+<input type="number" id="searchComboID"></input>
+
+<hr>
+
+<h1 id="maxCombination">
     -
 </h1>
 
-<h1 id="char2">
-    -
-</h1>
-
-<h1 id="char3">
-    -
-</h1>
-
-<h1 id="char4">
-    -
-</h1>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-sm-6">
+            <div class="card" style="width: 18rem;">
+                <img id = "FullChara1" src="{{url('assets/images/FullChara/Keqing.png')}}" class="rounded mx-auto d-block card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" id="char1">Character Name 1</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Normal Attack</li>
+                    <li class="list-group-item">Elemental Skill</li>
+                    <li class="list-group-item">Elemental Burst</li>
+                    <li class="list-group-item">Unique Talent</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" id="char2">Character Name 2</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Normal Attack</li>
+                    <li class="list-group-item">Elemental Skill</li>
+                    <li class="list-group-item">Elemental Burst</li>
+                    <li class="list-group-item">Unique Talent</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" id="char3">Character Name 3</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Normal Attack</li>
+                    <li class="list-group-item">Elemental Skill</li>
+                    <li class="list-group-item">Elemental Burst</li>
+                    <li class="list-group-item">Unique Talent</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" id="char4">Character Name 4</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Normal Attack</li>
+                    <li class="list-group-item">Elemental Skill</li>
+                    <li class="list-group-item">Elemental Burst</li>
+                    <li class="list-group-item">Unique Talent</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 <hr>
 <h1 id="combID">
     X
 </h1>
 
-<script src="{{ asset('assets/js/bootstrap.js') }}"></script>
-<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('js/shuffle.js') }}"></script>
-<script src="{{ asset('js/encrypt-decrypt.js') }}"></script>
-<script src="{{ asset('js/utility.js') }}"></script>
-<script>
-
-
-</script>
-</body>
-
-</html>
-
+@endsection

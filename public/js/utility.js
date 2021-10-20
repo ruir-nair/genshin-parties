@@ -16,3 +16,7 @@ function bubbleSort(arr){
         return arr;
     };
 
+function maxPossibleCombination(num){
+    partyLimit = 4;
+    return (num-3)*(num-2)*(num-1)*num/24;
+};
